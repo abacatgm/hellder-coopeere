@@ -1,64 +1,62 @@
 
 <ion-header>
-  <ion-card>
-  <ion-img  
-    [routerLink]="['/onboarding']" 
-    style="max-width: 10%; padding: 20px; margin-left: 60px;" 
-    src="../../../assets/images-coopeere/coopere.png"
-    >
-  </ion-img>
-</ion-card>
-  
+
+  <script src="../home/ionic-modified.js"></script>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container flex-col sm:flex-row">
+
+      <a class="navbar-brand" href="/">
+        <img class="pb-2" src="https://coopeere.microcampos.com.br/img/logo-coopeere-vert.png" alt="Coopeere">
+        <span>CNPJ: 40.409.711/0001-39</span>
+      </a>
+      
+      <div class="nav-usuario">
+        <div class="usuario">
+          <div class="usuario-nome">Hellder Benjamin</div>
+          <div class="d-flex justify-content-md-between space-x-2">
+            <div class="usuario-dados">
+              CPF: 
+              <span class="usuario-documento">007.344.457-09</span>
+            </div>
+            <div class="usuario-dados">No. do Coop.: 43</div>
+          </div>
+        </div>
+      
+        <ul class="navbar-nav ml-5 nav-separator nav-exit">
+          <li class="nav-item">
+            <br>
+            <a class="nav-link text-right" href="https://coopeere.microcampos.com.br">Sair</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </ion-header>
-<ion-header>
-
-  <ion-list *ngIf="data">
-    <ion-item *ngFor="let item of data">
-      {{ item.title }}
-    </ion-item>
-  </ion-list>
-  
-</ion-header>
-
 
 <ion-header>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="selectedTab">
-      <ion-segment-button value="option1">
-        Informações Pessoais
-      </ion-segment-button>
-      <ion-segment-button value="option2">
-        Informações Preenchimento
-      </ion-segment-button>
-      <ion-segment-button value="option3">
-        Triagem
-      </ion-segment-button>
-      <ion-segment-button value="option4">
-        PRODIST
-      </ion-segment-button>
-      <ion-segment-button value="option5">
-        Mensalidade
-      </ion-segment-button>
-      <ion-segment-button value="option6">
-      Regulamento
-      </ion-segment-button>
-      <ion-segment-button value="option7">
-        Sorteio
-      </ion-segment-button>
-      <ion-segment-button value="option8">
-        Convite
-      </ion-segment-button>
+  <ion-toolbar class="no-border">
+    <ion-segment [(ngModel)]="selectedTab" class="segment-no-padding container-fluid container-step-menu">
+    
+        <ion-segment-button value="option1" id="tab_0" class="step finish active" data-index="0" [ngClass]="{'active': selectedTab === 'option1'}">Informações Pessoais</ion-segment-button>
+        <ion-segment-button value="option2" id="tab_1" class="step finish" data-index="1" [ngClass]="{'active': selectedTab === 'option2'}">Informações Preenchimento</ion-segment-button>
+        <ion-segment-button value="option3" id="tab_2" class="step finish" data-index="2" [ngClass]="{'active': selectedTab === 'option3'}">Triagem</ion-segment-button>
+        <ion-segment-button value="option4" id="tab_3" class="step finish" data-index="3" [ngClass]="{'active': selectedTab === 'option4'}">PRODIST</ion-segment-button>
+        <ion-segment-button value="option5" id="tab_4" class="step " data-index="4" [ngClass]="{'active': selectedTab === 'option5'}">Mensalidade</ion-segment-button>
+        <ion-segment-button value="option6" id="tab_5" class="step " data-index="5" [ngClass]="{'active': selectedTab === 'option6'}">Regulamento</ion-segment-button>
+        <ion-segment-button value="option7" id="tab_6" class="step " data-index="6" [ngClass]="{'active': selectedTab === 'option7'}">Sorteio</ion-segment-button>
+        <ion-segment-button value="option8" id="tab_7" class="step " data-index="7" [ngClass]="{'active': selectedTab === 'option8'}">Convite</ion-segment-button>
+
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div [ngSwitch]="selectedTab">
-    <div *ngSwitchCase="'option1'">
+    <div *ngSwitchCase="'option1'" class="ngcontent">
 
-<ion-card class="card1">
+<h2>
   Seja bem-vindo 
-</ion-card>
+</h2>
 
 <ion-card class="blue-associate">
 
@@ -332,5 +330,3 @@
   
   </ion-toolbar>
 </ion-footer>
-
-
