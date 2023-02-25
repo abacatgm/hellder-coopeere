@@ -6,7 +6,10 @@ ion-segment-button {
     all: unset;
 }
 * {
+    color: black;
     --background: #fff;
+    font-family: Nunito,sans-serif;
+    --indicator-transition: none;
 }
 :root {
     --bs-blue: #0d6efd;
@@ -98,15 +101,20 @@ ion-segment-button {
 
 .blue-associate {
     background-color: rgb(163, 220, 220);
-    padding: 20px;
+    padding: 8px;
     color: blue;
     font-size: 16px;
     font-weight: bold;
     display: flex;
     margin: 10px;
+    border-radius: 9px;
     text-align: start;
     align-items: left;
     justify-content: left;
+
+    .blueTitle {
+        color: blue; ;
+    }
 }
 
 .associate-text {
@@ -115,25 +123,29 @@ ion-segment-button {
 }
 
 .blue-associate-icon {
-    background-color:blue;
+    background-color: rgba(96,165,250, 1);
     font-weight: normal;
     display: flex;
     flex-direction: row;
-    margin: auto;
-    padding: 15px;
-    border-radius: 20px;
+    padding: 18px;
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .blue-associate-icon ion-icon {
     color:#fff;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: normal;
 }
 
 .card-infos {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0px;
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: 15px;
@@ -142,67 +154,84 @@ ion-segment-button {
 .card-infos-group {
    display: flex ;
     flex-direction: row;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
 }
 
 .red-associate {
    
     background-color: rgb(220, 163, 163);
-    padding: 20px;
+    padding: 8px;
     color: red;
     font-size: 16px;
     font-weight: bold;
     display: flex;
     margin: 10px;
+    border-radius: 9px;
     text-align: start;
     align-items: left;
     justify-content: left;
+
+    .redTitle {
+        color: red; ;
+    }
 }
 
 .red-associate-icon {
-    background-color:rgb(255, 0, 0);
+    background-color: rgb(248, 113, 113);
     font-weight: normal;
     display: flex;
     flex-direction: row;
-    margin: auto;
-    padding: 15px;
-    border-radius: 20px;
+    padding: 18px;
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .red-associate-icon ion-icon {
     color:#fff;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: normal;
 }
 
 .green-associate {
    
     background-color: rgb(164, 247, 146);
-    padding: 20px;
+    padding: 8px;
     color: green;
     font-size: 16px;
     font-weight: bold;
     display: flex;
     margin: 10px;
+    border-radius: 9px;
     text-align: start;
     align-items: left;
     justify-content: left;
+
+    .greenTitle {
+        color: green; ;
+    }
 }
 
 .green-associate-icon {
-    background-color: green;
+    background-color: rgba(52,211,153, 1);
     font-weight: normal;
     display: flex;
     flex-direction: row;
-    margin: auto;
-    padding: 15px;
-    border-radius: 20px;
+    padding: 18px;
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .green-associate-icon ion-icon {
     color:#fff;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: normal;
 }
 
@@ -408,14 +437,11 @@ ol, ul {
 }
 .container-step-menu {
     align-items: end;
-    border-bottom: 1px solid #e4e4ef;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(228, 228, 239);
     display: flex;
     flex-wrap: wrap;
     margin-left: 0;
     justify-content: center;
+    margin-top: -45px;
 }
 .container-step-menu .step.active {
     background: #fff;
@@ -440,7 +466,7 @@ ol, ul {
     display: inline-flex;
     height: 35px;
     margin-bottom: -1px;
-    padding: -1 15px;
+    padding: 0 15px;
     white-space: nowrap;
 }
 .header-md::after {
@@ -469,7 +495,7 @@ ol, ul {
     display: inline-block;
     font-size: 14px;
     height: 10px;
-    margin: 8px 10px 4px 4px;
+    margin: 3px 10px 4px 4px;
     opacity: .5;
     width: 10px;
 }
@@ -484,9 +510,79 @@ ol, ul {
     margin: 8px 0px 4px 4px;
 }
 ion-segment-button::part(indicator) {
-    height: 5px;
+    
     top: 0;
-}  
-.ngcontent, h2 {
+}
+ion-segment-button::part(indicator-background) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 4px;
+}
+.ngcontent {
     background: #fff;
+    padding: 10px;
+}
+div h2 {
+    font-size: 1.5rem;
+    background: #fff;
+    padding: 0 0 10px 118px;
+}
+ion-segment-button::part(native) {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+.contentBorder {
+    /* border-top: 1px solid #000000;
+    box-shadow: inset 0 -1px 0 0 black;
+     */
+}
+ion-label, .card-infos, .card-infos-group {
+    background: none;
+}
+ion-icon {
+    background: none;
+}
+ion-segment {
+    box-shadow: inset 0 -1px 0 0 #e4e4ef;;
+}
+h2 {
+    margin: 0;
+}
+.active {
+    border-left: 1px solid #e4e4ef; ;
+    border-top: 1px solid #e4e4ef; ;
+    border-right: 1px solid #e4e4ef; ;
+}
+ion-card {
+    width: 100%;
+    background-color: #eff6ff!important;
+}
+.col-md-6 {
+    position: absolute;
+    top: 30px;
+    right: 130px;
+    width: 546px;
+    height: 400px;
+    background-color: #FFF;
+    padding-right: 0px;
+    padding-left: 0px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.allCards {
+    all: unset;
+    position: absolute;
+    left: 108px;
+    width: 546px;
+}
+ion-toolbar {
+    height: 34px;
+}
+.toolbar-background {
+    display: none;
+}
+.arrowBack {
 }

@@ -1,10 +1,22 @@
 
 <ion-header>
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&amp;display=swap" rel="stylesheet">
+  <link href="https://coopeere.microcampos.com.br/assets/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
   <script src="../home/ionic-modified.js"></script>
   <nav class="navbar navbar-expand-lg">
     <div class="container flex-col sm:flex-row">
-
       <a class="navbar-brand" href="/">
         <img class="pb-2" src="https://coopeere.microcampos.com.br/img/logo-coopeere-vert.png" alt="Coopeere">
         <span>CNPJ: 40.409.711/0001-39</span>
@@ -33,43 +45,43 @@
   </nav>
 </ion-header>
 
-<ion-header>
-  <ion-toolbar class="no-border">
-    <ion-segment [(ngModel)]="selectedTab" class="segment-no-padding container-fluid container-step-menu">
-    
-        <ion-segment-button value="option1" id="tab_0" class="step finish active" data-index="0" [ngClass]="{'active': selectedTab === 'option1'}">Informações Pessoais</ion-segment-button>
-        <ion-segment-button value="option2" id="tab_1" class="step finish" data-index="1" [ngClass]="{'active': selectedTab === 'option2'}">Informações Preenchimento</ion-segment-button>
-        <ion-segment-button value="option3" id="tab_2" class="step finish" data-index="2" [ngClass]="{'active': selectedTab === 'option3'}">Triagem</ion-segment-button>
-        <ion-segment-button value="option4" id="tab_3" class="step finish" data-index="3" [ngClass]="{'active': selectedTab === 'option4'}">PRODIST</ion-segment-button>
-        <ion-segment-button value="option5" id="tab_4" class="step " data-index="4" [ngClass]="{'active': selectedTab === 'option5'}">Mensalidade</ion-segment-button>
-        <ion-segment-button value="option6" id="tab_5" class="step " data-index="5" [ngClass]="{'active': selectedTab === 'option6'}">Regulamento</ion-segment-button>
-        <ion-segment-button value="option7" id="tab_6" class="step " data-index="6" [ngClass]="{'active': selectedTab === 'option7'}">Sorteio</ion-segment-button>
-        <ion-segment-button value="option8" id="tab_7" class="step " data-index="7" [ngClass]="{'active': selectedTab === 'option8'}">Convite</ion-segment-button>
+<ion-toolbar>
+  <ion-segment [(ngModel)]="selectedTab" class="container-fluid container-step-menu">
+  
+      <ion-segment-button value="option1" id="tab_0" class="step finish active" data-index="0" [ngClass]="{'active': selectedTab === 'option1'}">Informações Pessoais</ion-segment-button>
+      <ion-segment-button value="option2" id="tab_1" class="step finish" data-index="1" [ngClass]="{'active': selectedTab === 'option2'}">Informações Preenchimento</ion-segment-button>
+      <ion-segment-button value="option3" id="tab_2" class="step finish" data-index="2" [ngClass]="{'active': selectedTab === 'option3'}">Triagem</ion-segment-button>
+      <ion-segment-button value="option4" id="tab_3" class="step finish" data-index="3" [ngClass]="{'active': selectedTab === 'option4'}">PRODIST</ion-segment-button>
+      <ion-segment-button value="option5" id="tab_4" class="step " data-index="4" [ngClass]="{'active': selectedTab === 'option5'}">Mensalidade</ion-segment-button>
+      <ion-segment-button value="option6" id="tab_5" class="step " data-index="5" [ngClass]="{'active': selectedTab === 'option6'}">Regulamento</ion-segment-button>
+      <ion-segment-button value="option7" id="tab_6" class="step " data-index="6" [ngClass]="{'active': selectedTab === 'option7'}">Sorteio</ion-segment-button>
+      <ion-segment-button value="option8" id="tab_7" class="step " data-index="7" [ngClass]="{'active': selectedTab === 'option8'}">Convite</ion-segment-button>
 
-    </ion-segment>
-  </ion-toolbar>
-</ion-header>
+  </ion-segment>
+</ion-toolbar>
 
 <ion-content>
+
   <div [ngSwitch]="selectedTab">
+    <h2><br>
+      Informações Pessoais 
+    </h2>
     <div *ngSwitchCase="'option1'" class="ngcontent">
-
-<h2>
-  Seja bem-vindo 
-</h2>
-
+      
+<div class="allCards">
 <ion-card class="blue-associate">
 
-  <div class="card-infos-group">
+<div class="card-infos-group">
 
   <div class="blue-associate-icon">
-    <ion-icon name="bulb"></ion-icon>
+    <ion-icon class="far fa-lightbulb">
+    </ion-icon>
   </div>
 
   <br><br>
 
   <div class="card-infos">
-    <ion-label>Associado</ion-label>
+    <ion-label class="blueTitle">Associado</ion-label>
       <!-- LEMBRAR QUE AQUI NA VERDADE PRECISA ESTAR O NOME DA PESSOA LOGADA -->
     <ion-label class="associate-text">Hellder Benjamin</ion-label>
       <!-- LEMBRAR QUE AQUI NA VERDADE PRECISA ESTAR O CPF DA PESSOA LOGADA -->
@@ -81,20 +93,19 @@
 </ion-card>
 
 <ion-card class="green-associate">
-
   
   <div class="card-infos-group">
 
     <div class="green-associate-icon">
-      <ion-icon name="call"></ion-icon>
+      <ion-icon class="fa fa-volume-control-phone" aria-hidden="true"></ion-icon>
     </div>
   
     <br><br>
   
     <div class="card-infos">
-      <ion-label>Contatos</ion-label>
+      <ion-label class="greenTitle">Contatos</ion-label>
         <!-- LEMBRAR QUE AQUI NA VERDADE PRECISA ESTAR O NOME DA PESSOA LOGADA -->
-      <ion-label class="associate-text">(22) 99984 - 2434</ion-label>
+      <ion-label class="associate-text">(22) 9984-2434</ion-label>
         
       
     </div>
@@ -110,13 +121,13 @@
   <div class="card-infos-group">
 
     <div class="red-associate-icon">
-      <ion-icon name="location"></ion-icon>
+      <ion-icon class="fa fa-map-marker"></ion-icon>
     </div>
   
     <br><br>
   
     <div class="card-infos">
-      <ion-label>Endereço</ion-label>
+      <ion-label class="redTitle">Endereço</ion-label>
         <!-- LEMBRAR QUE AQUI NA VERDADE PRECISA ESTAR A RUA E O NÚMERO DA PESSOA LOGADA -->
       <ion-label class="associate-text">Rua Professora Agricolina de Freitas</ion-label>
         <!-- LEMBRAR QUE AQUI NA VERDADE PRECISA ESTAR A CIDADE E A SIGLA DO ESTADO DA PESSOA LOGADA -->
@@ -128,9 +139,14 @@
   </div>
 
 </ion-card>
+</div>
 
+<div class="col-md-6 d-none d-md-block text-md-right">
+  <img class="w-full h-96 rounded-xl object-cover shadow-md" src="https://coopeere.microcampos.com.br/img/informacoes-pessoais.jpg" alt="thumb" style="height: 400px">
+</div>
 
-    </div>
+</div>
+
     <div *ngSwitchCase="'option2'">
       Content for option 2
     </div>
@@ -301,22 +317,29 @@
     </div>
    
   </div>
+  
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
     
-    <ion-buttons slot="end">
-      <ion-button (click)="previousPage()">
+    <ion-buttons class="arrowBack" slot="end">
+      <ion-button *ngIf="selectedTab !== 'option1'" (click)="previousPage()">
         <ion-icon name="arrow-back"></ion-icon>
         <ion-label>Anterior</ion-label>
       </ion-button>
     </ion-buttons>
 
-    <ion-buttons slot="end">
+    <ion-buttons *ngIf="selectedTab !== 'option8'" class="arrowForward" slot="end">
       <ion-button (click)="nextPage()">
         <ion-label>Próxima</ion-label>
         <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button *ngIf="selectedTab === 'option8'">
+        <ion-label>Finalizar</ion-label>
       </ion-button>
     </ion-buttons>
   
@@ -326,6 +349,7 @@
         <ion-icon name="save"></ion-icon>
       </ion-button>
     </ion-buttons>
+    
 
   
   </ion-toolbar>

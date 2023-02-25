@@ -34,12 +34,16 @@ export class HomePage implements OnInit {
       this.selectedTab = 'option6';
     } else if (this.selectedTab === 'option6') {
       this.selectedTab = 'option7';
+    } else if (this.selectedTab === 'option7') {
+      this.selectedTab = 'option8';
     }
 
   }
 
   previousPage() {
-    if (this.selectedTab === 'option7'){
+    if (this.selectedTab === 'option8'){
+      this.selectedTab = 'option7';
+    } else if (this.selectedTab === 'option7'){
       this.selectedTab = 'option6';
     } else if (this.selectedTab === 'option6'){
       this.selectedTab = 'option5';
