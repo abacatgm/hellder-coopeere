@@ -420,3 +420,56 @@ ion-input {
     }
 
   }
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .navbar {
+      display: block!important;
+    }
+    .navbar {
+        padding: 3rem 2rem 0.5rem;
+        background-color: transparent;
+    }
+    .navbar-nav {
+        display: block;
+        flex-direction: inherit;
+        align-items: start;
+    }
+    .d-block {
+        display: flex!important;
+    }
+    li ion-button, li div a {
+        color: #2a302f;
+        text-decoration: none;
+    
+    }
+    li div, li ion-button::part(native) {
+        padding-left: 0!important;
+        padding-right: 30px!important;
+    }
+    ion-button::part(native) {
+        
+        align-items: start;
+        justify-content: start;
+        display: grid;
+        
+    }
+    .header {
+        display: none;
+      }
+      li ion-button, li a, li {
+
+        padding-bottom: 0;
+        height: 38px;
+
+        &::before {
+
+            display: none;
+        }
+      
+      }
+    }
+    @media (min-width: 1025px) {
+        .navbar {
+          display: none!important;
+        }
+        
+        }     

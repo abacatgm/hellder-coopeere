@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 
 
 
@@ -19,11 +20,11 @@
     
   
   </ion-header>
-  
+
   <ion-header class="header">
+        
     
-    
-      <ion-img  [routerLink]="['/onboarding']"  style="max-width: 10%;" src="../../../assets/images-coopeere/coopere.png"></ion-img>
+    <ion-img  [routerLink]="['/onboarding']"  style="max-width: 10%;" src="../../../assets/images-coopeere/coopere.png"></ion-img>
     
   
     
@@ -43,9 +44,54 @@
     <ion-button fill="clear" [routerLink]="['/vantagens']" routerLinkActive="active-link">Vantagens</ion-button>
     <ion-button fill="clear"  [routerLink]="['/parceiros']" routerLinkActive="active-link">Parceiros</ion-button>
     <ion-button fill="clear" [routerLink]="['/faleconosco']" routerLinkActive="active-link">Fale Conosco</ion-button>
+    
   
   </ion-header>
   
+  <ion-header class="navbar navbar-light light-blue lighten-4 d-block d-md-none">
+  
+    <ion-img [routerLink]="['/onboarding']"  style="max-width: 10%;" src="../../../assets/images-coopeere/coopere.png"></ion-img>
+
+  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fa fa-bars" aria-hidden="true"></i></span></button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <ion-button fill="clear"  [routerLink]="['/']" routerLinkActive="active-link">Home</ion-button>
+      </li>
+      <li class="nav-item">
+      <div class="dropdown">
+      
+        <a [routerLink]="['']" routerLinkActive="active-link">A COOPEERE <svg class="arrowicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/></svg></a>
+      <div class="dropdown-content">
+        <a [routerLink]="['/quemsomos']" class="dropdown-item">Quem Somos?</a>
+        <a [routerLink]="['/objetivos']" class="dropdown-item">Objetivo</a>
+        <a [routerLink]="['/equipe']" class="dropdown-item">A Equipe</a>
+      </div>
+    </div>
+    </li>
+    <li class="nav-item">
+    <ion-button fill="clear"  [routerLink]="['/estatuto']" routerLinkActive="active-link">Estatuto</ion-button>
+    </li>
+    <li class="nav-item">
+    <ion-button fill="clear"  [routerLink]="['/legislacao']" routerLinkActive="active-link">Legislação</ion-button>
+    </li>
+    <li class="nav-item">
+    <ion-button fill="clear" [routerLink]="['/vantagens']" routerLinkActive="active-link">Vantagens</ion-button>
+    </li>
+    <li class="nav-item">
+    <ion-button fill="clear"  [routerLink]="['/parceiros']" routerLinkActive="active-link">Parceiros</ion-button>
+    </li>
+    <li class="nav-item">
+    <ion-button fill="clear" [routerLink]="['/faleconosco']" routerLinkActive="active-link">Fale Conosco</ion-button>
+    </li>
+  </ul>
+
+  </div>
+
+  </ion-header>
   
   <ion-content>
   
