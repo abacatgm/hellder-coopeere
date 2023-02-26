@@ -52,10 +52,10 @@
       <ion-segment-button value="option2" id="tab_1" class="step finish" data-index="1" [ngClass]="{'active': selectedTab === 'option2'}">Informações Preenchimento</ion-segment-button>
       <ion-segment-button value="option3" id="tab_2" class="step finish" data-index="2" [ngClass]="{'active': selectedTab === 'option3'}">Triagem</ion-segment-button>
       <ion-segment-button value="option4" id="tab_3" class="step finish" data-index="3" [ngClass]="{'active': selectedTab === 'option4'}">PRODIST</ion-segment-button>
-      <ion-segment-button value="option5" id="tab_4" class="step " data-index="4" [ngClass]="{'active': selectedTab === 'option5'}">Mensalidade</ion-segment-button>
-      <ion-segment-button value="option6" id="tab_5" class="step " data-index="5" [ngClass]="{'active': selectedTab === 'option6'}">Regulamento</ion-segment-button>
-      <ion-segment-button value="option7" id="tab_6" class="step " data-index="6" [ngClass]="{'active': selectedTab === 'option7'}">Sorteio</ion-segment-button>
-      <ion-segment-button value="option8" id="tab_7" class="step " data-index="7" [ngClass]="{'active': selectedTab === 'option8'}">Convite</ion-segment-button>
+      <ion-segment-button value="option5" id="tab_4" class="step finish" data-index="4" [ngClass]="{'active': selectedTab === 'option5'}">Mensalidade</ion-segment-button>
+      <ion-segment-button value="option6" id="tab_5" class="step finish" data-index="5" [ngClass]="{'active': selectedTab === 'option6'}">Regulamento</ion-segment-button>
+      <ion-segment-button value="option7" id="tab_6" class="step finish" data-index="6" [ngClass]="{'active': selectedTab === 'option7'}">Sorteio</ion-segment-button>
+      <ion-segment-button value="option8" id="tab_7" class="step finish" data-index="7" [ngClass]="{'active': selectedTab === 'option8'}">Convite</ion-segment-button>
 
   </ion-segment>
 </ion-toolbar>
@@ -63,11 +63,10 @@
 <ion-content>
 
   <div [ngSwitch]="selectedTab">
-    <h2><br>
-      Informações Pessoais 
-    </h2>
     <div *ngSwitchCase="'option1'" class="ngcontent">
-      
+      <h2 class="insertInfo"><br>
+        Informações Pessoais 
+      </h2>
 <div class="allCards">
 <ion-card class="blue-associate">
 
@@ -147,16 +146,76 @@
 
 </div>
 
-    <div *ngSwitchCase="'option2'">
-      Content for option 2
+    <div *ngSwitchCase="'option2'" class="ngcontent">
+      <div class="container-step-content">
+      <h2 class="insertInfo">Informações de Preenchimento</h2>
+      <p>Pedimos que use as funções a seguir durante o preenchimento:</p>
+      
+      <p>A função <strong>"Enviar"</strong> deverá ser utilizada somente quando todo formulário estiver preenchido e ao menos uma mensalidade for paga clicando no último item<br> da barra de opções. Havendo necessidade de mudança nos dados enviados, clique na função "Reeditar" e todas as lacunas de preenchimento estarão aptas<br> a serem modificadas. Um link será enviado para o e-mail ou um código para o celular. Siga as instruções.</p>
+      
+      <p>A função <strong>"Salvar"</strong> poderá ser utilizada a qualquer momento durante o preenchimento e assim garantir o que já foi preenchido não será perdido. Usando<br> esta função, você poderá concluir o preenchimento novamente quando desejar.</p>
+      
+      <p>A função <strong>"Visualizar/Imprimir"</strong> encontrará o Formulário PRODIST padrão ANEEL pag. 73. Será neste formulário que enviaremos seus dados a Distribuidora<br> de Energia responsável pelo seu município.</p>
+      
+      <p>A função <strong>"Reeditar"</strong> Clique em reeditar quando for fazer alterações nos dados já enviados a cooperativa. Será enviado um link para o e-mail usado no ato<br> do cadastro. No caso de mudança de celular, será necessário o envio de link para o mesmo e-mail usado no cadastro. Mudança de e-mail enviaremos código<br> via SMS para o celular usado no ato do cadastro.</p>
+      
+      <p>A função <strong>"Deletar conta"</strong>. Clique em deletar conta para remover todos seus dados e sair da cooperativa. Agradecemos se deixar um feedback sobre as<br> razões de sua saída.</p>
     </div>
-    <div *ngSwitchCase="'option3'">
-      Content for option 3
+  </div>
+    <div *ngSwitchCase="'option3'" class="option-content">
+      <div class="container-step-content">
+        <form class="triagemForm" method="POST" id="regForm" action="">
+          <fieldset class="fieldset">
+            <h3 class="tab-title">Triagem</h3>
+            <p for="operadora">Escolha a sua distribuidora (de acordo com sua conta de luz):</p>
+            <div class="operadora_field mb-5">
+              
+                <label class="form-check-label checked" for="operadora1" id="operadora1_nome">
+                  <input class="form-check-input" checked="" type="radio" id="operadora1" name="idoperadora" value="1" wfd-id="id17">
+                  <span>Enel-RJ</span>
+                </label>
+              
+                <label class="form-check-label " for="operadora2" id="operadora2_nome">
+                  <input class="form-check-input" type="radio" id="operadora2" name="idoperadora" value="2" wfd-id="id18">
+                  <span>Light-RJ</span>
+                </label>
+              
+                <label class="form-check-label " for="operadora3" id="operadora3_nome">
+                  <input class="form-check-input" type="radio" id="operadora3" name="idoperadora" value="3" wfd-id="id19">
+                  <span>Enel-SP</span>
+                </label>
+                  </div>
+        
+                                            
+            <div class="row align-items-start md:align-items-center mb-3">
+              <div class="col-auto">
+                <input class="form-check-input" type="radio" id="titular" checked="" name="eh_titular" value="true" wfd-id="id20">
+              </div>
+        
+              <div class="col">
+                <label class="form-check-label" for="titular" id="mensagem_triagem_titular">Tenho uma conta Enel-RJ em meu nome. (Preencha o formulário PRODIST ANEEL com os dados desta conta)</label>
+              </div>
+        
+            </div>
+        
+            <div class="row align-items-start md:align-items-center">
+              <div class="col-auto">
+                <input class="form-check-input" type="radio" id="ntitular" name="eh_titular" value="false" wfd-id="id21">
+              </div>
+        
+              <div class="col">
+                <label class="form-check-label" for="ntitular" id="mensagem_triagem_ntitular">Não sou titular de uma conta Enel-RJ, mas me cadastrarei com o Link convite que me foi enviado ou o farei sem convite por livre e espontânea vontade para apoiar a cooperativa. (você será um Cooperado Apoiador).</label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </form>
+      </div>
     </div>
-    <div *ngSwitchCase="'option4'">
+    <div *ngSwitchCase="'option4'" class="ngcontent">
       Content for option 4
     </div>
-    <div *ngSwitchCase="'option5'">
+    <div *ngSwitchCase="'option5'" class="ngcontent">
       
       <div class="row-of-payment-options">
 
@@ -306,13 +365,13 @@
       </div>
 
     </div>
-    <div *ngSwitchCase="'option6'">
+    <div *ngSwitchCase="'option6'" class="ngcontent">
       Content for option 6
     </div>
-    <div *ngSwitchCase="'option7'">
+    <div *ngSwitchCase="'option7'" class="ngcontent">
       Content for option 7
     </div>
-    <div *ngSwitchCase="'option8'">
+    <div *ngSwitchCase="'option8'" class="ngcontent">
       Content for option 8
     </div>
    
@@ -321,7 +380,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
+  <ion-toolbar class="footer-toolbar">
     
     <ion-buttons class="arrowBack" slot="end">
       <ion-button *ngIf="selectedTab !== 'option1'" (click)="previousPage()">
@@ -337,13 +396,13 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-buttons slot="end">
-      <ion-button *ngIf="selectedTab === 'option8'">
+    <ion-buttons *ngIf="selectedTab === 'option8'" class="finish" slot="end">
+      <ion-button>
         <ion-label>Finalizar</ion-label>
       </ion-button>
     </ion-buttons>
   
-    <ion-buttons slot="end">
+    <ion-buttons slot="end" class="save">
       <ion-button>
         <ion-label>Salvar</ion-label>
         <ion-icon name="save"></ion-icon>

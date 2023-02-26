@@ -10,6 +10,17 @@ ion-segment-button {
     --background: #fff;
     font-family: Nunito,sans-serif;
     --indicator-transition: none;
+    --color: none;
+    --color-checked: none;
+    --indicator-color: #3880ff;
+
+    .button-clear, ion-buttons,p, strong {
+        background: #fff;
+    }
+    .tab-title {
+        background: #fff;
+        font-size: 1.5rem;
+    }
 }
 :root {
     --bs-blue: #0d6efd;
@@ -501,10 +512,12 @@ ol, ul {
 }
 
 .container-step-content {
-    --tw-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
     background: #fff;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
     padding-top: 2rem;
+}
+.option-step-content{
+    background: #fff;
+    padding-top: 1rem;
 }
 .container-step-content::before {
     margin: 8px 0px 4px 4px;
@@ -521,11 +534,16 @@ ion-segment-button::part(indicator-background) {
 .ngcontent {
     background: #fff;
     padding: 10px;
+    padding-left: 118px;
+}
+.option-content {
+    background: #fff;
+    padding-left: 118px;
 }
 div h2 {
     font-size: 1.5rem;
     background: #fff;
-    padding: 0 0 10px 118px;
+    padding: 0 0 10px 0px;
 }
 ion-segment-button::part(native) {
     padding-inline-start: 0;
@@ -581,8 +599,107 @@ ion-card {
 ion-toolbar {
     height: 34px;
 }
+.footer-toolbar {
+    padding-bottom: 50px!important;
+}
 .toolbar-background {
     display: none;
 }
-.arrowBack {
+.insertInfo {
+    padding: 0!important;
+    margin-bottom: 16px;
+}
+.triagemForm {
+    background: #FFF;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+    background: #FFF;
+
+    .col{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .col, #mensagem_triagem_titular, #mensagem_triagem_ntitular {
+        background: #FFF;
+    }
+}
+fieldset .row {
+    padding-left: 40px;
+    padding-right: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background: #fff;
+}
+.operadora_field {
+    background: #FFF;
+    display: flex;
+    gap: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.operadora_field .form-check-label.checked {
+    background: #eff6ff;
+    border-color: #0d6efd;
+}
+.operadora_field .form-check-label {
+    background: #FFF;
+    border: 1px solid #d9dade;
+    border-radius: 0.25rem;
+    color: #292b35;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+label {
+    display: inline-block;
+}
+.form-check-input:checked[type=radio] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23fff'/%3E%3C/svg%3E");
+}
+.operadora_field .form-check-label input {
+    margin-right: 0.5rem;
+}
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.form-check-input[type=radio] {
+    border-radius: 50%;
+}
+.form-check-input {
+    -webkit-print-color-adjust: exact;
+    appearance: none;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.25);
+    height: 1em;
+    margin-top: 0.2em;
+    vertical-align: top;
+    width: 1em;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+}
+label span {
+    background: none;
+    margin-left: 1.7rem;
+}
+.col-auto > .form-check-input {
+    left: 0px;
+    margin-left: -40px;
 }
