@@ -291,7 +291,7 @@ header {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     position: relative;
@@ -452,7 +452,7 @@ ol, ul {
     flex-wrap: wrap;
     margin-left: 0;
     justify-content: center;
-    margin-top: -45px;
+    margin-top: 00000;
 }
 .container-step-menu .step.active {
     background: #fff;
@@ -534,7 +534,8 @@ ion-segment-button::part(indicator-background) {
 .ngcontent {
     background: #fff;
     padding: 10px;
-    padding-left: 118px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .option-content {
     background: #fff;
@@ -577,7 +578,7 @@ ion-card {
 }
 .col-md-6 {
     position: absolute;
-    top: 30px;
+    top: 235px;
     right: 130px;
     width: 546px;
     height: 400px;
@@ -597,7 +598,7 @@ ion-card {
     width: 546px;
 }
 ion-toolbar {
-    height: 34px;
+    height: 69px;
 }
 .footer-toolbar {
     padding-bottom: 50px!important;
@@ -702,4 +703,110 @@ label span {
 .col-auto > .form-check-input {
     left: 0px;
     margin-left: -40px;
+}
+.class-of-row-of-payment-options {
+    padding: 14px;
+    margin: 8px;
+    width: 94%;
+    height: 94%;
+    
+}
+.row-of-payment-options {
+    overflow-y: hidden;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    ion-header {
+        height: 225px;
+    }
+    .navbar .nav-item .nav-link {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        padding: 0 1.5rem;
+    }
+    ion-toolbar, .footer-toolbar {
+        display: table;
+        padding-bottom: 0!important;
+        height: 56px; 
+        
+    }
+    .container-step-menu {
+        margin-right: 0;
+
+        .step {
+
+            padding: 0px 13px;
+        }
+    }
+    .ngcontent {
+        padding-left: 0;
+        padding-right: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .allCards {
+        left: 0;
+        width: 300px;
+        position: unset;
+        display: grid;
+
+        ion-card {
+        margin-left: 0px;
+        margin-right: 0px;
+        }
+    }
+    .operadora_field {
+        flex-wrap: wrap;
+        gap: 0;
+
+        .form-check-label {
+            margin-bottom: 14px;
+            margin-right: 17px;
+        }
+    }
+    .align-items-start {
+        display: flow-root;
+        padding-left: 40px;
+    }
+    .option-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    .row-of-payment-options {
+        overflow-y: hidden;
+
+        div {
+            margin-right: 10px;
+            margin-left: 10px;
+
+            .class-of-row-of-payment-options {
+                padding: 14px;
+                margin: 8px;
+                width: 94%;
+                height: 94%;
+            }
+        }
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .option-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+        .allCards {
+            padding-left: 20px;
+        }
+        .insertInfo {
+            margin-left: 20px;
+        }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+@media (min-width: 1201px) {
+    
 }
