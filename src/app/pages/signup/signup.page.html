@@ -199,24 +199,24 @@
         <label class="form-label" for="nome">Nome Completo*</label>
         <div class="col-span-5">
           <div class="input-group">
-            <input [(ngModel)]="usuario.name" type="text" class="form-control" id="nome" name="nome" value="" required="" wfd-id="id2">
+            <input [(ngModel)]="usuario.name" type="text" class="form-control" id="nome" name="nome" value="" required wfd-id="id2">
           </div>
         </div>
 
         <label class="form-label" for="email">E-mail*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.email"  type="text" class="form-control" id="email" name="email" value="" required="" wfd-id="id3">
+          <input [(ngModel)]="usuario.email"  type="text" class="form-control" id="email" name="email" value="" required wfd-id="id3">
         </div>
 
         <label class="form-label" for="cpf_cnpj">CPF/CNPJ*</label>
         <div class="input-group w-60">
-          <input [(ngModel)]="usuario.cpfcnpj" type="text" class="form-control usuario-documento" id="cpf_cnpj" name="cpf_cnpj" value="" size="25" required="" maxlength="14" wfd-id="id4">
-          <p *ngIf="formulario.get('usuario.cpfcnpj').touched && formulario.get('usuario.cpfcnpj').errors?.usuario.cpfcnpj">CPF inválido.</p>
+          <input [(ngModel)]="usuario.cpfcnpj" type="text" class="form-control usuario-documento" id="cpf_cnpj" name="cpf_cnpj" value="" size="25" required maxlength="14" wfd-id="id4">
+          <!-- <p *ngIf="formulario.get('usuario.cpfcnpj').touched && formulario.get('usuario.cpfcnpj').errors?.usuario.cpfcnpj">CPF inválido.</p> -->
         </div>
 
         <label class="form-label" for="telefone_celular">Telefone Celular*</label>
         <div class="input-group w-60">
-          <input [(ngModel)]="usuario.phonenumber" type="text" class="form-control" id="telefone_celular" name="telefone_celular" size="16" value="" required="" placeholder="Insira aqui seu telefone" wfd-id="id5">
+          <input [(ngModel)]="usuario.phonenumber" type="text" class="form-control" id="telefone_celular" name="telefone_celular" size="16" value="" required placeholder="Insira aqui seu telefone" wfd-id="id5">
         </div>
 
         <label class="form-label" for="telefone_fixo">Telefone Fixo</label>
@@ -226,12 +226,12 @@
 
         <label class="form-label" for="senha">Senha*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="senha" name="senha" required="" wfd-id="id7">
+          <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="senha" name="senha" required wfd-id="id7">
         </div>
 
         <label class="form-label" for="confirmar_senha">Confirmar Senha*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="confirma_senha" name="confirma_senha" required="" wfd-id="id8">
+          <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="confirma_senha" name="confirma_senha" required wfd-id="id8">
         </div>
 
         <div class="form-group-title">Endereço*</div>
@@ -240,7 +240,7 @@
         <div class="col-span-5">
           <div class="flex">
             <div class="input-group w-25">
-              <input [(ngModel)]="usuario.cep" class="form-control" type="text" id="cep" name="cep" value="" size="10" required="" wfd-id="id9">
+              <input [(ngModel)]="usuario.cep" onblur="pesquisacep(this.value);" class="form-control" type="text" id="cep" name="cep" size="10" required wfd-id="id9">
             </div>
             <div class="p-2 d-none" id="loading-cep">
               <div class="spinner-border spinner-border-sm" role="status">
@@ -255,27 +255,27 @@
         
         <label class="form-label" for="endereco">Endereço*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.address" type="text" class="form-control" id="endereco" name="endereco" value="" required="" wfd-id="id10">
+          <input [(ngModel)]="usuario.address" type="text" class="form-control" id="endereco" name="endereco" required wfd-id="id10">
         </div>
 
         <label class="form-label" for="endereco">Número*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.number" type="text" class="form-control" id="numero" name="numero" value="" required="" wfd-id="id11">
+          <input [(ngModel)]="usuario.number" type="text" class="form-control" id="numero" name="numero" value="" required wfd-id="id11">
         </div>
 
         <label class="form-label" for="bairro">Bairro*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.nhood" type="text" class="form-control" id="bairro" name="bairro" value="" required="" wfd-id="id12">
+          <input [(ngModel)]="usuario.nhood" type="text" class="form-control" id="bairro" name="bairro" value="" required wfd-id="id12">
         </div>
 
         <label class="form-label" for="cidade">Cidade*</label>
         <div class="input-group">
-          <input [(ngModel)]="usuario.province" type="text" class="form-control" id="cidade" name="cidade" value="" required="" wfd-id="id13">
+          <input [(ngModel)]="usuario.province" type="text" class="form-control" id="cidade" name="cidade" value="" required wfd-id="id13">
         </div>
-
+        
         <label class="form-label" for="estado">Estado*</label>
         <div class="input-group">
-          <select [(ngModel)]="usuario.state" class="form-select" id="estado" name="estado" required="">
+          <select [(ngModel)]="usuario.state" class="form-select" id="estado" name="estado" required>
             <option value="">UF</option>
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>

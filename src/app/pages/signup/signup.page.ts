@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Usuario } from 'src/app/interfaces/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup',
@@ -15,15 +16,14 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class SignupPage implements OnInit {
 
-  
   selectedOption: string = '';
  
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
-    public navCtrl: NavController
-
+    public navCtrl: NavController,
+    private http: HttpClient
 
     ) {}
 
@@ -58,6 +58,14 @@ openExternalLinkYouTube(){
 
 ngOnInit(): void{
   this.validaForm();
+
+  this.http.get('assets/buscarcep.js', { responseType: 'text' })
+  .subscribe(js => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.text = js;
+    document.body.appendChild(script);
+  });
 }
 
 
@@ -70,13 +78,13 @@ usuario: Usuario = {
   
   bday: null,
   genre: "",
-  cpfcnpj: 0,
-  homenumber: 0,
-  phonenumber: 0,
+  cpfcnpj: null,
+  homenumber: null,
+  phonenumber: null,
 
-  cep: 0,
+  cep: null,
     address: "",
-    number: 0,
+    number: null,
     nhood: "",
     city: "",
     province: "",
